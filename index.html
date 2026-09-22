@@ -243,6 +243,39 @@ html[data-lang="fi"] .lang-toggle [data-set="fi"]{background:#fff;color:var(--te
 .io{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .io.in{opacity:1;transform:none}
 
+/* ============ Ideation ============ */
+.idea{background:#fff;border-block:1px solid var(--line)}
+.idea-highlight{
+  background:linear-gradient(160deg,var(--ink) 0%,var(--ink-2) 100%);color:#fff;
+  border-radius:var(--radius);padding:clamp(1.8rem,4vw,3rem);overflow:hidden;position:relative;
+}
+.idea-highlight::before{content:"";position:absolute;right:-120px;bottom:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(15,157,143,.35),transparent 70%)}
+.idea-highlight-text{position:relative;max-width:42rem;margin-bottom:2.4rem}
+.idea-highlight-text h3{color:#fff;font-size:clamp(1.5rem,3.4vw,2.1rem);margin-bottom:.8rem}
+.idea-highlight-text p{color:rgba(255,255,255,.82);font-size:1.08rem}
+.idea-highlight-grid{position:relative;display:grid;gap:2rem;align-items:center}
+@media(min-width:800px){.idea-highlight-grid{grid-template-columns:1.1fr .9fr}}
+.idea-highlight-grid .idea-highlight-text{margin-bottom:0}
+.idea-photo{border-radius:var(--radius-sm);overflow:hidden;border:1px solid rgba(255,255,255,.2)}
+.idea-photo img{width:100%;height:100%;max-height:280px;object-fit:cover;cursor:zoom-in;transition:transform .5s}
+.idea-photo:hover img{transform:scale(1.04)}
+.idea-grid{position:relative;display:grid;gap:1.1rem;margin-top:2.4rem}
+@media(min-width:800px){.idea-grid{grid-template-columns:repeat(3,1fr)}}
+.idea-link{
+  position:relative;display:inline-flex;align-items:center;gap:.9rem;margin-top:1.8rem;
+  text-decoration:none;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;padding:.5rem 1.2rem .5rem .5rem;transition:background .2s,border-color .2s,transform .2s;
+}
+.idea-link:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.35);transform:translateY(-2px)}
+.idea-link-thumb{width:52px;height:52px;border-radius:50%;overflow:hidden;flex:none;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.1)}
+.idea-link-thumb img{width:100%;height:100%;object-fit:cover;object-position:center}
+.idea-link-text{display:inline-flex;align-items:center;gap:.5rem;color:#8ff0e2;font-weight:600;font-size:.98rem}
+.idea-link:hover .idea-link-text{color:#fff}
+.idea-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-sm);padding:1.4rem}
+.idea-ico{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-size:1.4rem;color:#fff;margin-bottom:1rem}
+.idea-card h4{color:#fff;font-size:1.15rem;margin-bottom:.5rem}
+.idea-card p{color:rgba(255,255,255,.78);font-size:.96rem}
+
 /* ============ Grant ============ */
 .grant{background:var(--paper)}
 .grant-grid{display:grid;gap:3rem}
@@ -370,6 +403,7 @@ footer .brand{justify-content:center;color:#fff;margin-bottom:1rem}
     <div class="nav-links" id="navLinks">
       <a href="#about"><span class="lang-en">Who I am</span><span class="lang-fi">Kuka olen</span></a>
       <a href="#story"><span class="lang-en">The story</span><span class="lang-fi">Tarina</span></a>
+      <a href="#idea"><span class="lang-en">Ideation</span><span class="lang-fi">Ideointi</span></a>
       <a href="#grant"><span class="lang-en">Start-up grant</span><span class="lang-fi">Starttiraha</span></a>
       <a href="#results"><span class="lang-en">Results</span><span class="lang-fi">Tulokset</span></a>
       <a href="#advice"><span class="lang-en">Advice</span><span class="lang-fi">Neuvot</span></a>
@@ -388,6 +422,7 @@ footer .brand{justify-content:center;color:#fff;margin-bottom:1rem}
   <button class="close" id="menuClose" aria-label="Close menu"><i class="ph ph-x" aria-hidden="true"></i></button>
   <a href="#about"><span class="lang-en">Who I am</span><span class="lang-fi">Kuka olen</span></a>
   <a href="#story"><span class="lang-en">The story</span><span class="lang-fi">Tarina</span></a>
+  <a href="#idea"><span class="lang-en">Ideation</span><span class="lang-fi">Ideointi</span></a>
   <a href="#grant"><span class="lang-en">Start-up grant</span><span class="lang-fi">Starttiraha</span></a>
   <a href="#results"><span class="lang-en">Results</span><span class="lang-fi">Tulokset</span></a>
   <a href="#advice"><span class="lang-en">Advice</span><span class="lang-fi">Neuvot</span></a>
@@ -548,6 +583,59 @@ footer .brand{justify-content:center;color:#fff;margin-bottom:1rem}
           <div class="photo"><img src="sanistudio.png" alt="Sani Studio work" loading="lazy" data-zoom></div>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Ideation ============ -->
+<section id="idea" class="section idea">
+  <div class="container">
+    <div class="section-head center-head io">
+      <div class="kicker"><i class="ph-fill ph-brain" aria-hidden="true"></i><span class="lang-en">How it starts</span><span class="lang-fi">Miten se alkaa</span></div>
+      <h2 class="section-title"><span class="lang-en">Where ideas begin</span><span class="lang-fi">Mistä ideat syntyvät</span></h2>
+      <p>
+        <span class="lang-en">Ideation only starts once you understand the environment, the work culture, and the area you live in. Only then can you really ask: what do students dream of building?</span>
+        <span class="lang-fi">Ideointi voi alkaa vasta, kun ymmärtää ympäristön, työkulttuurin ja alueen, jolla asuu. Vasta silloin voi kysyä: mitä opiskelijat unelmoivat rakentavansa?</span>
+      </p>
+    </div>
+
+    <div class="idea-highlight io">
+      <div class="idea-highlight-grid">
+        <div class="idea-highlight-text">
+          <h3><span class="lang-en">What could be done in Viitasaari?</span><span class="lang-fi">Mitä Viitasaarella voisi tehdä?</span></h3>
+          <p>
+            <span class="lang-en">A small town is not a limitation, it's a real-world test lab. In Viitasaari, students can try an idea, see how it lands, get support from people who know the area, and actually get seen.</span>
+            <span class="lang-fi">Pieni kaupunki ei ole rajoite, vaan aito testilaboratorio. Viitasaarella opiskelijat voivat kokeilla ideaa, nähdä miten se otetaan vastaan, saada tukea alueen tuntevilta ihmisiltä ja tulla oikeasti nähdyksi.</span>
+          </p>
+        </div>
+        <div class="idea-photo"><img src="viitasaari.jpeg" alt="Viitasaari" loading="lazy" data-zoom></div>
+      </div>
+
+      <div class="idea-grid">
+        <div class="idea-card">
+          <div class="idea-ico" style="background:#14b8a6"><i class="ph-bold ph-flask" aria-hidden="true"></i></div>
+          <h4><span class="lang-en">Try and see</span><span class="lang-fi">Kokeile ja näe</span></h4>
+          <p><span class="lang-en">Test an idea in a real, small-scale environment before committing further, and learn fast from genuine reactions.</span><span class="lang-fi">Testaa ideaa aidossa, pienimuotoisessa ympäristössä ennen suurempaa sitoutumista, ja opi nopeasti aidoista reaktioista.</span></p>
+        </div>
+        <div class="idea-card">
+          <div class="idea-ico" style="background:#2f7cf6"><i class="ph-bold ph-hand-heart" aria-hidden="true"></i></div>
+          <h4><span class="lang-en">Get support</span><span class="lang-fi">Saa tukea</span></h4>
+          <p><span class="lang-en">Local agencies, advisors and mentors are close by, know the area, and genuinely want new ideas to succeed.</span><span class="lang-fi">Paikalliset yritysneuvojat ja mentorit ovat lähellä, tuntevat alueen ja haluavat aidosti uusien ideoiden onnistuvan.</span></p>
+        </div>
+        <div class="idea-card">
+          <div class="idea-ico" style="background:#f2a51a"><i class="ph-bold ph-eye" aria-hidden="true"></i></div>
+          <h4><span class="lang-en">Get seen</span><span class="lang-fi">Tule nähdyksi</span></h4>
+          <p><span class="lang-en">In a smaller community, your work gets noticed, by companies, customers, and people who can open the next door.</span><span class="lang-fi">Pienemmässä yhteisössä työsi huomataan, niin yritysten, asiakkaiden kuin seuraavan oven avaajien toimesta.</span></p>
+        </div>
+      </div>
+
+      <a href="https://lnkd.in/p/d-rQFdpd" target="_blank" rel="noopener" class="idea-link">
+        <span class="idea-link-thumb"><img src="viitasaari01.jpeg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></span>
+        <span class="idea-link-text">
+          <span class="lang-en">Read more about Viitasaari</span><span class="lang-fi">Lue lisää Viitasaaresta</span>
+          <i class="ph-bold ph-arrow-up-right" aria-hidden="true"></i>
+        </span>
+      </a>
     </div>
   </div>
 </section>
@@ -757,7 +845,7 @@ footer .brand{justify-content:center;color:#fff;margin-bottom:1rem}
   $$('.io').forEach(function(el){ io.observe(el); });
 
   /* ---- Active nav link ---- */
-  var sections = ['about','story','grant','results','advice'].map(function(id){return document.getElementById(id)});
+  var sections = ['about','story','idea','grant','results','advice'].map(function(id){return document.getElementById(id)});
   var links = $$('#navLinks a');
   var spy = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
@@ -802,7 +890,7 @@ footer .brand{justify-content:center;color:#fff;margin-bottom:1rem}
   });
 
   /* ---- Presenting: arrow keys jump between sections ---- */
-  var order = ['hero','about','story','grant','results','advice','contact'];
+  var order = ['hero','about','story','idea','grant','results','advice','contact'];
   function currentIndex(){
     var y = window.scrollY + window.innerHeight * 0.35, idx = 0;
     order.forEach(function(id, i){
